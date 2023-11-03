@@ -172,7 +172,11 @@ public class StringArrayUtils {
      * @return array of Strings with each consecutive duplicate occurrence concatenated as a single string in an array of Strings
      */ // TODO
     public static String[] packConsecutiveDuplicates(String[] array) {
-        return null;
+
+        // REGEX REGEX REGEXX MAYBE???
+        String combined = Arrays.toString(array).replace("[","").replace("]","").replace(",","").replace(" ", "");
+
+        return combined.split("(?<=(.))(?!\\1|$)");
     }
 
 
